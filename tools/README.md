@@ -4,7 +4,7 @@
 This directory contains some little tools to assist with the process of
 developing the emulator, and using it.
 
-uimage2strings - This utility reads a disk pack image and dumps it
+**uimage2strings** - This utility reads a disk pack image and dumps it
 to stdout treating it as if it's all character data (either 9-bit ASCII
 or FIELDATA).  The motivation for doing this is just to be able to
 casually peruse a disk image to get an idea of what's in it.  1100
