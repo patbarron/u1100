@@ -15,3 +15,7 @@
 *.exe
 *.out
 *.app
+
+# The "packs" directory (virtual disk pack images) and everything in it
+packs/
+packs/*
