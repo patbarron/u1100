@@ -19,3 +19,11 @@
 # The "packs" directory (virtual disk pack images) and everything in it
 packs/
 packs/*
+
+# Don't save backup files in the repo
+*.BAK
+*.bak
+*.SAVE
+*.old
+*.OLD
+*~
