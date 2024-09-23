@@ -23,7 +23,7 @@ users (they were previously only providing license keys that were valid
 for a year at a time and thus had to be renewed annually), , so I no
 longer have that crutch to lean on...  It's not clear what progress can
 be made without some form of OS1100 boot tape image.  There is a small
-program that is distributed with David William Nixon's [1100/40 (1108) emulator](https://sites.google.com/view/univacemulators/110040), that could
+program that is distributed with David William Nixon's [1100/40 (1110) emulator](https://sites.google.com/view/univacemulators/110040), that could
 potentially be used as a test, but it seems like that emulator internally
 implements some basic functionality of EXEC-8 that I'm not sure I want
 to try to do at this point.  But even just getting an executable
