@@ -27,6 +27,21 @@
  *    for now, this works just fine.
  */
 
+static unsigned char fieldata[] = {
+	/* Static array of FIELDATA to ASCII mappings.  Non-ASCII chars
+	 * are mapped to NULL because we really only care about things
+	 * that have printable representations.
+	 */
+
+	/* 00 */ '@', '[', ']', '#', '\0', ' ', 'A', 'B',
+	/* 10 */ 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+	/* 20 */ 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+	/* 30 */ 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+	/* 40 */ ')', '-', '+', '<', '=', '>', '&', '$',
+	/* 50 */ '*', '(', '%', ':', '?', '!', ',', '\\',
+	/* 60 */ '0', '1', '2', '3', '4', '5', '6', '7',
+	/* 70 */ '8', '9', '\'', ';', '/', '.', '\0', '\0',
+};
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -77,6 +92,42 @@ void image2ascii(int fd)
 	}
 }
 
+void image2fieldata(int fd)
+{
+        int i; /* generic loop iteration variable */
+	unsigned char disk_words[9];  /* The current set of bytes from
+                                         the image that we are turning
+                                         into 36-bit words. */
+        unsigned char output_bytes[12]; /* We assemble the output into
+                                          this array. */
+        for (i=0; i<9; i++) {
+                disk_words[i] = '\0';
+        }
+        /* Yes, we are really going to read this file 9 bytes at
+         * a time, and write the output 12 bytes at a time...  I'm
+         * just not up for trying to make it more efficient right
+         * now...
+         */
+        while (read(fd, disk_words, 9) > 0) {
+		output_bytes[0] = fieldata[disk_words[0] >> 2];
+		output_bytes[1] = fieldata[((disk_words[0] & 03) << 4) | (disk_words[1] >> 4)];
+		output_bytes[2] = fieldata[((disk_words[1] & 017) << 2) | (disk_words[2] >> 6)];
+		output_bytes[3] = fieldata[disk_words[2] & 077];
+		output_bytes[4] = fieldata[disk_words[3] >> 2];
+		output_bytes[5] = fieldata[((disk_words[3] & 03 ) << 4) | (disk_words[4] >> 4)];
+		output_bytes[6] = fieldata[((disk_words[4] & 017) << 2) | (disk_words[5] >> 6)];
+		output_bytes[7] = fieldata[disk_words[5] & 077];
+		output_bytes[8] = fieldata[disk_words[6] >> 2];
+		output_bytes[9] = fieldata[((disk_words[6] & 03)  << 4) | (disk_words[7] >> 4)];
+		output_bytes[10] = fieldata[((disk_words[7] & 017) << 2) | (disk_words[8] >> 6)];
+		output_bytes[11] = fieldata[disk_words[8] & 077];
+                write(1, output_bytes, 12);
+                for (i=0; i < 9; i++) {
+                        disk_words[i] = '\0';
+                }
+        }
+}
+
 void main(int argc, char *argv[]) {
 	int pack_fd;
 
@@ -96,8 +147,9 @@ void main(int argc, char *argv[]) {
 		exit(0);
 	}
 	else if (strcmp(argv[1], "-r") == 0) {
-		fprintf(stderr, "Sorry, FIELDATA character extraction isn't implemented yet!\n");
-		exit(4);
+		fprintf(stderr, "Extracting FIELDATA character data, stand by...\n");
+		image2fieldata(pack_fd);
+		exit(0);
 	}
 	else {
 		fprintf(stderr, "%s: Unrecognized flag %s\n", argv[0], argv[1]);

@@ -19,4 +19,5 @@ image in 8-bit bytes (just like your native filesystem and operating
 system expect), so you can peek at it.  Aside from just observation
 and learning, there is nothing you can really do with the output of
 this program - all you can do with it is look at it.  But sometimes,
-that's all you need to do...
+that's all you need to do...  It is impossible to over-emphasize exactly
+how much of an ugly, brute-force hack this tool is.  But it works.
