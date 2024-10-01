@@ -1,10 +1,31 @@
 u1100
 =====
 
-Partial emulator for Sperry Univac 1100/80 mainframe (or possibly some
-other, earlier, model - not entirely clear).
+Partial emulator for some Sperry Univac 1100 Series mainframe...  I was
+originally intending to target the 1100/80, but it contains complications
+I don't want to deal with right now (most notably Univac 494 mode,
+which would pretty much require building a second emulator inside of
+the 1100 emulator).  I'd still eventually like to get there, but it's
+probably better to start with something less ambitious.  The 1100/60 was
+considered, but I can't find complete documentation on it (in particular,
+the interaction of the processor with the System Support Processor -
+I would not consider emulating the SSP per se, but would have to emulate
+its observable functionality).  The 1100/40 (a/k/a Univac 1110, at least
+for emulation purposes) would be a lot more reasonable, and there is
+pretty complete documentation, but it too has a complication I don't
+want to deal with right now (Univac 1107 addressing compatbility mode).
+So that pretty much leaves the 1100/20 (1108), and 1100/10 (1106) -
+almost entirely the same computer, except the 1100/10 is just a
+half-speed version of the 1100/20.  This was a little simpler
+than I had really wanted (for example, you can only base one bank
+at a time) - but I realize that that simplicity makes it a much more
+reasonable place to start (and it's not like I have an OS that would
+run on any of these emulation targets anyway...).  So that's what
+I think I'm going to do.  The emulation target may change (or the
+emulator may expand to support multiple emulation targets) in the
+future.  But this is OK for now.
 
-This work is just beginning - there's nothing to see here (yet!)
+This work is just beginning - there's not much to see here (yet!)
 
 (Yes, I know this repo has been sitting here, unpopulated, for
 several years.  I wish this were not the case...  My primary issue with
@@ -13,8 +34,8 @@ if I were to implement something, I have no way to even guess if it's
 working or not.  I do have a hobbyist distribution [directly from
 Unisys and everything] of OS2200, but I do not know if it will run
 on the 1100/80 configuration I want to target with this project.  If
-I can someday find an old OS1100 IPL tape, I'm much more likely to
-make progress on this....)
+I can someday find an old OS1100 or EXEC-8 boot tape, I'm much more
+likely to make progress on this....)
 
 Update - September 2024...  This long-mothballed project has been on
 my mind again recently.  Unisys has stopped distributing OS2200 Express,
@@ -31,4 +52,6 @@ loaded and doing *something* is better than not having anything at all...
 
 I am also planning to put together some tools to maniplulate
 disk pack images, so that the emulator will at least have some
-way to do disk I/O, assuming it ever gets that far along.
+way to do disk I/O (assuming it ever gets that far along), as
+well as a very basic cross-assembler (to be able to assemble
+1100 binaries on Linux)..
