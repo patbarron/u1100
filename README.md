@@ -54,4 +54,23 @@ I am also planning to put together some tools to maniplulate
 disk pack images, so that the emulator will at least have some
 way to do disk I/O (assuming it ever gets that far along), as
 well as a very basic cross-assembler (to be able to assemble
-1100 binaries on Linux)..
+1100 binaries on Linux)...
+
+At least for the moment, I'm not going to be processing external pull
+requests or external code contributions.  Any pull request submitted
+right now is just going to sit for a while until the code is more
+fully fleshed out, and then may have to be rejected if it can't
+be merged into the codebase cleanly at that point, or if I've already
+implmented the functionality in the pull request.  So probably best
+to just hang on to those for a little while.  I fully intend to be open
+to that in the future - I just want to at least get a foundation built
+before I pull outside changes into it.  However, if someone were to
+be feeling very enthusiastic about making some kind of code contribution,
+rather than trying to work on the emulator itself, there are some
+external standalone utilities that are needed, that I would
+gratefully accept pull requests to add.  What's currently needed
+can be found in the Issues section of this repo - in particular,
+issue #2 and issue #3 are going to need to be done pretty early
+on in the project lifecycle, and as standalone utilities,
+these items would not really need to be "merged" into anything
+(since they'd be their own thing).
