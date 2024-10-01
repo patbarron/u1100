@@ -21,3 +21,9 @@ and learning, there is nothing you can really do with the output of
 this program - all you can do with it is look at it.  But sometimes,
 that's all you need to do...  It is impossible to over-emphasize exactly
 how much of an ugly, brute-force hack this tool is.  But it works.
+
+**platform-sizes** - A very simple tool to just print out the size (in
+bytes) of various primitive data structures on the emulation host
+platform.  This could potentially be extended later to print out
+sizes of the emulator's own data structures, but for right now we
+just need to be able to look at the sizes of primitives.
