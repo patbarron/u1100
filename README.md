@@ -13,17 +13,24 @@ I would not consider emulating the SSP per se, but would have to emulate
 its observable functionality).  The 1100/40 (a/k/a Univac 1110, at least
 for emulation purposes) would be a lot more reasonable, and there is
 pretty complete documentation, but it too has a complication I don't
-want to deal with right now (Univac 1107 addressing compatbility mode).
-So that pretty much leaves the 1100/20 (1108), and 1100/10 (1106) -
-almost entirely the same computer, except the 1100/10 is just a
-half-speed version of the 1100/20.  This was a little simpler
-than I had really wanted (for example, you can only base one bank
-at a time) - but I realize that that simplicity makes it a much more
-reasonable place to start (and it's not like I have an OS that would
-run on any of these emulation targets anyway...).  So that's what
+want to deal with right now (Univac 1107 addressing compatbility mode -
+I'd have to implement a whole separate set of addressing logic that
+almost certainly would never get used..).  So that pretty much leaves
+the 1100/20 (1108), and 1100/10 (1106) - almost entirely the same computer,
+except the 1100/10 is just a half-speed version of the 1100/20.  This was
+a little simpler than I had really wanted (for example, the 1100/20 can
+only base one bank at a time) - but I realize that that simplicity makes
+it a much more reasonable place to start (and it's not like I have an OS
+that would run on any of these emulation targets anyway...).  So that's what
 I think I'm going to do.  The emulation target may change (or the
 emulator may expand to support multiple emulation targets) in the
-future.  But this is OK for now.
+future.  But this is OK for now.  Technically, the emulation target
+system would be an 1100/21 - the last digit of the submodel number
+indicates how many CPUs are in the system  An 1100/20 system
+could support as many as three CPUs, though I am only going to
+implement one.  I'll try to implement hooks to hang additional
+CPUs on to the emulator, if it doesn't seem to add a lot of additional
+complication.
 
 This work is just beginning - there's not much to see here (yet!)
 
@@ -33,15 +40,15 @@ making any progress on this is, I have nothing to run on it - so even
 if I were to implement something, I have no way to even guess if it's
 working or not.  I do have a hobbyist distribution [directly from
 Unisys and everything] of OS2200, but I do not know if it will run
-on the 1100/80 configuration I want to target with this project.  If
-I can someday find an old OS1100 or EXEC-8 boot tape, I'm much more
-likely to make progress on this....)
+on the 1100/80 configuration I originally wanted to target with this
+project.  If I can someday find an old OS1100 or EXEC-8 boot tape, I'm
+much more likely to make progress on this....)
 
 Update - September 2024...  This long-mothballed project has been on
 my mind again recently.  Unisys has stopped distributing OS2200 Express,
 and has stopped renewing PS/2200 emulator licenses for existing
 users (they were previously only providing license keys that were valid
-for a year at a time and thus had to be renewed annually), , so I no
+for a year at a time and thus had to be renewed annually), so I no
 longer have that crutch to lean on...  It's not clear what progress can
 be made without some form of OS1100 boot tape image.  There is a small
 program that is distributed with David William Nixon's [1100/40 (1110) emulator](https://sites.google.com/view/univacemulators/110040), that could
@@ -54,7 +61,7 @@ I am also planning to put together some tools to maniplulate
 disk pack images, so that the emulator will at least have some
 way to do disk I/O (assuming it ever gets that far along), as
 well as a very basic cross-assembler (to be able to assemble
-1100 binaries on Linux)...
+1100 binaries on Linux).
 
 At least for the moment, I'm not going to be processing external pull
 requests or external code contributions.  Any pull request submitted
