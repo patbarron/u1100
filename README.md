@@ -70,7 +70,8 @@ rather than trying to work on the emulator itself, there are some
 external standalone utilities that are needed, that I would
 gratefully accept pull requests to add.  What's currently needed
 can be found in the Issues section of this repo - in particular,
-issue #2 and issue #3 are going to need to be done pretty early
+[issue #2](https://github.com/patbarron/u1100/issues/2) and
+[issue #3](https://github.com/patbarron/u1100/issues/3) are going to need to be done pretty early
 on in the project lifecycle, and as standalone utilities,
 these items would not really need to be "merged" into anything
 (since they'd be their own thing).
