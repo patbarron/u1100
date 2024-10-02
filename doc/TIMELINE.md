@@ -13,13 +13,13 @@ about the time of the last 1100 series system.
 
 | Date | Model | Notable Features | Integer add time | FP divide time |
 |------|-------|------------------|------------------|----------------|
-| 1962 | 1107  | No base registers, no guard mode (privileged mode), core memory | 4000ns | 26700ns |
+| 1962 | 1107  | No base registers, no guard mode (everything effectively runs in privileged mode all the time), core memory | 4000ns | 26700ns |
 | 1964 | 1108  | New addressing system, one I-bank base register, one D-bank base register, guard mode, core memory | 750ns | 8250ns |
 | 1965 | 1108 II (1108A) | Enhanced version of 1108, multiprocessor capable (up to three CPUs) | - | - |
 | 1969 | 1106 | Cost-reduced version of the 1108A, operates at half the speed, otherwise identical | 1000ns | 11000ns |
 | 1972 | 1110 | New segmented addressing system, two I-bank base registers, two D-bank base registers, 1107 addressing compatibility mode, supports up to four CPUs, plated-wire memory and core memory | 300ns | 5200ns |
 | 1975 | 1100/20 | Upgraded version of 1108A, MOS memory replaces core memory | 875ns | 8325ns |
-| 1975 | 1100/40 | Upgraded version of 1110, supports up to 6 CAUs, TTL memory replaces plated-wire memory, MOS memory replaces core memory | 300ns | 5200ns |
+| 1975 | 1100/40 | Upgraded version of 1110, supports up to 6 CAUs (processors), TTL memory replaces plated-wire memory, MOS memory replaces core memory | 300ns | 5200ns |
 | 1976 | 1100/10 | Upgraded version of 1106, MOS memory replaces core memory | 1125ns | 8825ns |
 | 1977 | 1100/80 | Supports up to 4 processors, high-speed cache memory, two I-bank base registers, two D-bank base registers, UNIVAC 494 compatibility mode (non-orivileged 494 instructions implemented in hardware, privileged 494 instructions emulated by software [Promega]) | 200ns | 4800ns |
 | 1979 | 1100/60 | Replacement for 1108, 1108A, 1106, 1100/10, and 1100/20, loadable microcode, microcode loading and system boot by System Support Processor (SSP), multiple configurations available | - | - |
