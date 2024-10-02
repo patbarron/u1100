@@ -1,3 +1,13 @@
+/*
+ * u1100 - Sperry Univac 1100 Series Mainframe Emulator
+ *         Copyright (c) 2024 Patrick Barron
+ *         All rights reserved.
+ *
+ *         This software is licensed under the Clear BSD License.  Refer
+ *         to the file "LICENSE" in the top level directory of this
+ *         project for license terms.
+ */
+
 /* 
  * uimage2strings - reinterpret a UNIVAC 1100 / Unisys 2200 disk pack image
  *    as either ASCII or FIELDATA, by extracting all of the 36 bit words
