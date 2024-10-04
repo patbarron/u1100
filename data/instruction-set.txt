@@ -147,4 +147,21 @@
 46 | 0-17 | | | XLI | Load X Increment
 47 | 0-17 | | | TLEM | Test Less Than or Equal to Modifier
 47 | 0-17 | | | TNGM | Test Not Greater Than Modifier
+50 | 0-17 | | | TZ | Test Zero
+51 | 0-17 | | | TNZ | Test Nonzero
+52 | 0-17 | | | TE | Test Equal
+53 | 0-17 | | | TNE | Test Not Equal
+54 | 0-17 | | | TLE,TNG | Test Less Than or Equal
+55 | 0-17 | | | TG | Test Greater
+56 | 0-17 | | | TW | Test Within Range
+57 | 0-17 | | | TNW | Test Not Within Range
+60 | 0-17 | | | TP | Test Positive
+61 | 0-17 | | | TN | Test Negative
+62 | 0-17 | | | SE | Search Equal
+63 | 0-17 | | | SNE | Search Not Equal
+64 | 0-17 | | | SLE,SNG | Search Less Than or Equal
+65 | 0-17 | | | SG | Search Greater
+66 | 0-17 | | | SW | Search Within Range
+67 | 0-17 | | | SNW | Search Not Within Range
+70 | | | | JGD | Jump Greater and Decrement
 # Continue entering codes from MASM manual later
