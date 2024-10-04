@@ -15,6 +15,6 @@
  * at a time).
  */
 
-#ifndef U110010
-#define U110010   /* Emulating the Sperry Univac 1100/10, a/k/a 1106) */
+#ifndef U110020
+#define U110020   /* Emulating the Sperry Univac 1100/20, a/k/a 1108) */
 #endif
