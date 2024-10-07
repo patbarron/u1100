@@ -17,7 +17,7 @@
 #
 # The general format of a line in this file is:
 #
-# f | j | a | Flag | Mnemonic | Description
+# f : j : a : Flag : Mnemonic : Description
 #
 # f = The "f" field in an instruction word
 # j = The "j" field in an instruction word
@@ -71,97 +71,97 @@
 #
 # User Instruction Repertoire
 #
-01 | 0-15 | | | SA | Store A
-02 | 0-15 | | | SNA | Store Negative A
-03 | 0-15 | | | SMA | Store Magnitude A
-04 | 0-15 | | | SR | Store R
-05 | 0-17 | 00 | | SZ | Store Zero
-05 | 0-17 | 01 | | SNZ | Store Negative Zero
-05 | 0-17 | 02 | | SP1 | Store Positive One
-05 | 0-17 | 03 | | SN1 | Store Negative One
-05 | 0-17 | 04 | | SFS | Store Fieldata Spaces
-05 | 0-17 | 05 | | SFZ | Store Fieldata Zeros
-05 | 0-17 | 06 | | SAS | Store ASCII Spaces
-05 | 0-17 | 10 | | INC | Increase Operand By One
-05 | 0-17 | 11 | | DEC | Decrease Operand By One
-05 | 0-17 | 12 | | INC2 | Increase Operand By Two
-05 | 0-17 | 13 | | DEC2 | Decrease Operand By Two
-05 | 0-17 | 14-17 | | ENZ | Increase Operand By Zero
-06 | 0-15 | | | SX | Store X
-07 | 12 | | | LDJ | Load D-Bank Base and Jump
-07 | 14 | | | LIJ | Load I-Bank Base and Jump
-07 | 15 | | | LPD | Load PSR Designators
-07 | 17 | | | SPD | Store PSR Designators
-07 | 17 | | | LBJ | Load Bank and Jump
-10 | 0-17 | | | LA | Load A
-11 | 0-17 | | | LNA | Load Negative A
-12 | 0-17 | | | LMA | Load Magnitude A
-13 | 0-17 | | | LNMA | Load Negative Magnitude A
-14 | 0-17 | | | AA | Add to A
-15 | 0-17 | | | ANA | Add Negative to A
-16 | 0-17 | | | AMA | Add Magnitude to A
-17 | 0-17 | | | ANMA | Add Negative Magnitude to A
-20 | 0-17 | | | AU | Add Upper
-21 | 0-17 | | | ANU | Add Negative Upper
-22 | 0-15 | | | BT | Block Transfer
-23 | 0-17 | | | LR | Load Register
-24 | 0-17 | | | AX | Add to X
-25 | 0-17 | | | ANX | Add Negative to X
-26 | 0-17 | | | LXM | Load X Modifier
-27 | 0-17 | | | LX | Load X
-30 | 0-17 | | | MI | Multiply Integer
-31 | 0-17 | | | MSI | Multiply Single Integer
-32 | 0-17 | | | MF | Multiply Fractional
-33 | 00 | | 1110 | BM | Byte Move
-33 | 01 | | 1110 | BMT | Byte Move With Translate
-33 | 03 | | 1110 | BTC | Byte Translate and Compare
-33 | 04 | | 1110 | BC | Byte Compare
-33 | 05 | | 1110 | BPD | Byte to Packed Decimal Convert
-33 | 06 | | 1110 | PDB | Packed Decimal to Byte Convert
-33 | 07 | | 1110 | EDIT | Edit
-33 | 10 | | 1110 | BI | Byte to Binary Single Integer Convert
-33 | 11 | | 1110 | BDI | Byte to Binary Double Integer Convert
-33 | 12 | | 1110 | IB | Binary Single Integer to Byte Convert
-33 | 13 | | 1110 | DIB | Binary Double Integer to Byte Convert
-33 | 14 | | 1110 | BF | Byte to Single Floating Convert
-33 | 15 | | 1110 | BDF | Byte to Double Floating Convert
-33 | 16 | | 1110 | FB | Single Floating to Byte Convert
-33 | 17 | | 1110 | DFB | Double Floating to Byte Convert
-34 | 0-17 | | | DI | Divide Integer
-35 | 0-17 | | | DSF | Divide Single Fractional
-36 | 0-17 | | | DF | Divide Fractional
-37 | 00 | | 1110 | QB | Quarter-Word Byte to Binary Compress
-37 | 01 | | 1110 | BQ | Binary to Quarter-Word Byte Extend
-37 | 02 | | 1110 | QBH | Quarter-Word Byte to Binary Halves Compress
-37 | 03 | | 1110 | BQH | Binary Halves to Quarter-Word Byte Extend
-37 | 04 | | 1110 | QDB | Quarter-Word Byte to Double Binary Compress
-37 | 05 | | 1110 | DBQ | Double Binary to Quarter-Word Byte Extend
-37 | 06 | | 1110 | BA | Byte Add
-37 | 07 | | 1110 | BAN | Byte Add Negative
-40 | 0-17 | | | OR | Logical OR
-41 | 0-17 | | | XOR | Logical Exclsive OR
-42 | 0-17 | | | AND | Logical AND
-43 | 0-17 | | | MLU | Masked Load Upper
-44 | o-17 | | | TEP | Test Even Parity
-45 | 0-17 | | | TOP | Test Odd Parity
-46 | 0-17 | | | XLI | Load X Increment
-47 | 0-17 | | | TLEM | Test Less Than or Equal to Modifier
-47 | 0-17 | | | TNGM | Test Not Greater Than Modifier
-50 | 0-17 | | | TZ | Test Zero
-51 | 0-17 | | | TNZ | Test Nonzero
-52 | 0-17 | | | TE | Test Equal
-53 | 0-17 | | | TNE | Test Not Equal
-54 | 0-17 | | | TLE,TNG | Test Less Than or Equal
-55 | 0-17 | | | TG | Test Greater
-56 | 0-17 | | | TW | Test Within Range
-57 | 0-17 | | | TNW | Test Not Within Range
-60 | 0-17 | | | TP | Test Positive
-61 | 0-17 | | | TN | Test Negative
-62 | 0-17 | | | SE | Search Equal
-63 | 0-17 | | | SNE | Search Not Equal
-64 | 0-17 | | | SLE,SNG | Search Less Than or Equal
-65 | 0-17 | | | SG | Search Greater
-66 | 0-17 | | | SW | Search Within Range
-67 | 0-17 | | | SNW | Search Not Within Range
-70 | | | | JGD | Jump Greater and Decrement
+01 : 0-15 : : : SA : Store A
+02 : 0-15 : : : SNA : Store Negative A
+03 : 0-15 : : : SMA : Store Magnitude A
+04 : 0-15 : : : SR : Store R
+05 : 0-17 : 00 : : SZ : Store Zero
+05 : 0-17 : 01 : : SNZ : Store Negative Zero
+05 : 0-17 : 02 : : SP1 : Store Positive One
+05 : 0-17 : 03 : : SN1 : Store Negative One
+05 : 0-17 : 04 : : SFS : Store Fieldata Spaces
+05 : 0-17 : 05 : : SFZ : Store Fieldata Zeros
+05 : 0-17 : 06 : : SAS : Store ASCII Spaces
+05 : 0-17 : 10 : : INC : Increase Operand By One
+05 : 0-17 : 11 : : DEC : Decrease Operand By One
+05 : 0-17 : 12 : : INC2 : Increase Operand By Two
+05 : 0-17 : 13 : : DEC2 : Decrease Operand By Two
+05 : 0-17 : 14-17 : : ENZ : Increase Operand By Zero
+06 : 0-15 : : : SX : Store X
+07 : 12 : : : LDJ : Load D-Bank Base and Jump
+07 : 14 : : : LIJ : Load I-Bank Base and Jump
+07 : 15 : : : LPD : Load PSR Designators
+07 : 17 : : : SPD : Store PSR Designators
+07 : 17 : : : LBJ : Load Bank and Jump
+10 : 0-17 : : : LA : Load A
+11 : 0-17 : : : LNA : Load Negative A
+12 : 0-17 : : : LMA : Load Magnitude A
+13 : 0-17 : : : LNMA : Load Negative Magnitude A
+14 : 0-17 : : : AA : Add to A
+15 : 0-17 : : : ANA : Add Negative to A
+16 : 0-17 : : : AMA : Add Magnitude to A
+17 : 0-17 : : : ANMA : Add Negative Magnitude to A
+20 : 0-17 : : : AU : Add Upper
+21 : 0-17 : : : ANU : Add Negative Upper
+22 : 0-15 : : : BT : Block Transfer
+23 : 0-17 : : : LR : Load Register
+24 : 0-17 : : : AX : Add to X
+25 : 0-17 : : : ANX : Add Negative to X
+26 : 0-17 : : : LXM : Load X Modifier
+27 : 0-17 : : : LX : Load X
+30 : 0-17 : : : MI : Multiply Integer
+31 : 0-17 : : : MSI : Multiply Single Integer
+32 : 0-17 : : : MF : Multiply Fractional
+33 : 00 : : 1110 : BM : Byte Move
+33 : 01 : : 1110 : BMT : Byte Move With Translate
+33 : 03 : : 1110 : BTC : Byte Translate and Compare
+33 : 04 : : 1110 : BC : Byte Compare
+33 : 05 : : 1110 : BPD : Byte to Packed Decimal Convert
+33 : 06 : : 1110 : PDB : Packed Decimal to Byte Convert
+33 : 07 : : 1110 : EDIT : Edit
+33 : 10 : : 1110 : BI : Byte to Binary Single Integer Convert
+33 : 11 : : 1110 : BDI : Byte to Binary Double Integer Convert
+33 : 12 : : 1110 : IB : Binary Single Integer to Byte Convert
+33 : 13 : : 1110 : DIB : Binary Double Integer to Byte Convert
+33 : 14 : : 1110 : BF : Byte to Single Floating Convert
+33 : 15 : : 1110 : BDF : Byte to Double Floating Convert
+33 : 16 : : 1110 : FB : Single Floating to Byte Convert
+33 : 17 : : 1110 : DFB : Double Floating to Byte Convert
+34 : 0-17 : : : DI : Divide Integer
+35 : 0-17 : : : DSF : Divide Single Fractional
+36 : 0-17 : : : DF : Divide Fractional
+37 : 00 : : 1110 : QB : Quarter-Word Byte to Binary Compress
+37 : 01 : : 1110 : BQ : Binary to Quarter-Word Byte Extend
+37 : 02 : : 1110 : QBH : Quarter-Word Byte to Binary Halves Compress
+37 : 03 : : 1110 : BQH : Binary Halves to Quarter-Word Byte Extend
+37 : 04 : : 1110 : QDB : Quarter-Word Byte to Double Binary Compress
+37 : 05 : : 1110 : DBQ : Double Binary to Quarter-Word Byte Extend
+37 : 06 : : 1110 : BA : Byte Add
+37 : 07 : : 1110 : BAN : Byte Add Negative
+40 : 0-17 : : : OR : Logical OR
+41 : 0-17 : : : XOR : Logical Exclsive OR
+42 : 0-17 : : : AND : Logical AND
+43 : 0-17 : : : MLU : Masked Load Upper
+44 : o-17 : : : TEP : Test Even Parity
+45 : 0-17 : : : TOP : Test Odd Parity
+46 : 0-17 : : : XLI : Load X Increment
+47 : 0-17 : : : TLEM : Test Less Than or Equal to Modifier
+47 : 0-17 : : : TNGM : Test Not Greater Than Modifier
+50 : 0-17 : : : TZ : Test Zero
+51 : 0-17 : : : TNZ : Test Nonzero
+52 : 0-17 : : : TE : Test Equal
+53 : 0-17 : : : TNE : Test Not Equal
+54 : 0-17 : : : TLE,TNG : Test Less Than or Equal
+55 : 0-17 : : : TG : Test Greater
+56 : 0-17 : : : TW : Test Within Range
+57 : 0-17 : : : TNW : Test Not Within Range
+60 : 0-17 : : : TP : Test Positive
+61 : 0-17 : : : TN : Test Negative
+62 : 0-17 : : : SE : Search Equal
+63 : 0-17 : : : SNE : Search Not Equal
+64 : 0-17 : : : SLE,SNG : Search Less Than or Equal
+65 : 0-17 : : : SG : Search Greater
+66 : 0-17 : : : SW : Search Within Range
+67 : 0-17 : : : SNW : Search Not Within Range
+70 : : : : JGD : Jump Greater and Decrement
 # Continue entering codes from MASM manual later
