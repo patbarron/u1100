@@ -50,3 +50,14 @@ Not sure if it's handled the same as on the 1100/80.  The book just
 says there is a breakpoint register, though I can't find any
 instructions that do anything with it.  I wonder if this is strictly
 a front-panel thing?
+
+## System Bootstrap
+
+How does an 1100/20 boot up?  How does the EXEC get loaded?  Does
+the emulator need to find it in the MFD and load it?
+
+I found a document (I don't recall which document at this point) that
+said that the first 2000 words of the boot drive contain bootstrap
+information (I guess beyond what's in the normal disk label, as
+described in the Installation Reference Manual and the Data Structures
+Programmer Reference).  What's in that?
