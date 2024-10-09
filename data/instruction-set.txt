@@ -164,4 +164,31 @@
 66 : 0-17 : : : SW : Search Within Range
 67 : 0-17 : : : SNW : Search Not Within Range
 70 : : : : JGD : Jump Greater and Decrement
+71 : 00 : : : MSE : Mask Search Equal
+71 : 01 : : : MSNE : Mask Search Not Equal
+71 : 02 : : : MSLE,MSNG : Mask Search Less Than or Equal
+71 : 03 : : : MSG : Mask Search Greater
+71 : 04 : : : MSW : Masked Search Within Range
+71 : 05 : : : MSNW : Masked Search Not Within Range
+71 : 06 : : : MASL : Masked Alphanumeric Search Less Than or Equal
+71 : 07 : : : MASG : Masked Alphanumeric Search Greater
+71 : 10 : : : DA : Double-Precision Fixed-Point Add
+71 : 11 : : : DAN : Douple-Precision Fixed-Point Add Negative
+71 : 12 : : : DS : Double Store A
+71 : 13 : : : DL : Double Load A
+71 : 14 : : : DLN : Double Load Negative A
+71 : 15 : : : DLM : Double Load Magnitude A
+71 : 16 : : : DJZ : Double-Precision Jump Zero
+71 : 17 : : : DTE : Double-Precision Test Equal
+72 : 01 : : : SLJ : Store Location And Jump
+72 : 02 : : : JPS : Jump Positive And Shift
+72 : 03 : : : JNS : Jump Negative And Shift
+72 : 04 : : : AH : Add Halves
+72 : 05 : : : ANH : Add Negative Halves
+72 : 06 : : : AT : Add Thirds
+72 : 07 : : : ANT : Add Negative Thirds
+72 : 10 : : : EX : Execute
+72 : 11 : : : ER : Executive Request
+72 : 16 : : : SRS : Store Register Set
+72 : 17 : : : LRS : Load Register Set
 # Continue entering codes from MASM manual later
