@@ -22,7 +22,11 @@ A general (pseudocode) description of the instruction execution loop.
       if (interrupt is pending)
           dispatch interrupt
           break to next CPU cycle after interrupt return
-      if P (current program counter) matches breakpoint register
+      if we didn't get here via a transfer of control
+           increment P (current program counter)
+      else we did get here by a control transfer
+           clear the flag that tells us that
+      if P matches breakpoint register
            do whatever breakpoint processing does
       fetch instruction from P
       decode current instruction
