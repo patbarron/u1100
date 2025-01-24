@@ -21,7 +21,7 @@ about the time of the last 1100 series system.
 | 1975 | 1100/20 | Upgraded version of 1108A, MOS memory replaces core memory | 875ns | 8325ns |
 | 1975 | 1100/40 | Upgraded version of 1110, supports up to 6 CAUs (processors), TTL memory replaces plated-wire memory, MOS memory replaces core memory | 300ns | 5200ns |
 | 1976 | 1100/10 | Upgraded version of 1106, MOS memory replaces core memory | 1125ns | 8825ns |
-| 1977 | 1100/80 | Supports up to 4 processors, high-speed cache memory, two I-bank base registers, two D-bank base registers, UNIVAC 494 compatibility mode (non-orivileged 494 instructions implemented in hardware, privileged 494 instructions emulated by software [Promega]) | 200ns | 4800ns |
+| 1977 | 1100/80 | Supports up to 4 processors, high-speed cache memory, two I-bank base registers, two D-bank base registers, UNIVAC 494 compatibility mode (non-privileged 494 instructions implemented in hardware, privileged 494 instructions emulated by software [Promega]) | 200ns | 4800ns |
 | 1979 | 1100/60 | Replacement for 1108, 1108A, 1106, 1100/10, and 1100/20, loadable microcode, microcode loading and system boot by System Support Processor (SSP), multiple configurations available | - | - |
 | 1981 | 1100/70 | Improved version of 1100/60 with denser main memory | - | - |
 | 1982 | 1100/90 | Last member of the 1100 series, liquid cooled | - | - |
