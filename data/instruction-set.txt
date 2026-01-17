@@ -29,7 +29,7 @@
 #     of multiple mnemonics separated by commas
 # Description = A short text description of the instruction
 #
-# The "f" field is a two-digit octal number from 00 to 17
+# The "f" field is a two-digit octal number from 00 to 77
 # The "j" field is a two-digit octal number, or a range, or left
 #    blank (meaning the instruction's function does not vary
 #    regardless of the value of "j")
