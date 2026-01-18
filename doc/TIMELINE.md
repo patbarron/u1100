@@ -22,7 +22,7 @@ about the time of the last 1100 series system.
 | 1975 | 1100/40 | Upgraded version of 1110, supports up to 6 CAUs (processors), TTL memory replaces plated-wire memory, MOS memory replaces core memory | 300ns | 5200ns |
 | 1976 | 1100/10 | Upgraded version of 1106, MOS memory replaces core memory | 1125ns | 8825ns |
 | 1977 | 1100/80 | Supports up to 4 processors, high-speed cache memory, two I-bank base registers, two D-bank base registers, UNIVAC 494 compatibility mode (non-privileged 494 instructions implemented in hardware, privileged 494 instructions emulated by software [Promega]) | 200ns | 4800ns |
-| 1979 | 1100/60 | Replacement for 1108, 1108A, 1106, 1100/10, and 1100/20, loadable microcode, microcode loading and system boot by System Support Processor (SSP), multiple configurations available | - | - |
+| 1979 | 1100/60 | Replacement for 1108, 1108A, 1106, 1100/10, and 1100/20, multiprocessor-capable (initially capable of using two processors, later up to four processors), loadable microcode, microcode loading and system boot by System Support Processor (SSP), multiple configurations available | - | - |
 | 1981 | 1100/70 | Improved version of 1100/60 with denser main memory | - | - |
 | 1982 | 1100/90 | Last member of the 1100 series, liquid cooled | - | - |
 
@@ -31,6 +31,8 @@ Shorter operation times, of course, represent better performance.
 
 The System Support Processor (SSP) for the 1100/60 and 1100/70 was an Intel 8080-based microcomputer system, and
 was also marketed as a standalone small business computer as the [Sperry Univac BC/7 Business Computer](https://www.ricomputermuseum.org/collections-gallery/equipment/sperry-univac-bc7-1).
+
+Beginning with the 1100/10 systems, in multiprocessor configurations, the last digit of the model number was the number of processors in the system - for example, a two-processor 1100/60 system would be referred to as 1100/62.
 
 After the introduction of the 1100/90, the "Univac" name was discontinued, and in 1985, the first member of the 2200 series systems
 was introduced - the Sperry 2200/100.  In 1986, Sperry merged with Burroughs to form Unisys, and in the same year the Unisys 2200/200
@@ -50,5 +52,6 @@ For further information, see:
 
 * [The Evolution of the Sperry Univac 1100 Series: A History, Analysis, and Projection, B.R. Borgerson, M.L. Hanson, and P.A. Hartley, Sperry Univac](https://dl.acm.org/doi/pdf/10.1145/359327.359334)
 * [Wikipedia: UNIVAC 1100/2200 Series](https://en.wikipedia.org/wiki/UNIVAC_1100/2200_series)
+* [Wikipedia: UNIVAC 1100/60](https://en.wikipedia.org/wiki/UNIVAC_1100/60)
 * [Bitsavers Univac 1100 document archive](https://bitsavers.org/pdf/univac/1100)
 * [Fourmilab Univac Memories document archive](https://www.fourmilab.ch/documents/univac/manuals/)
