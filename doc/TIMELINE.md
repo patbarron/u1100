@@ -56,3 +56,4 @@ For further information, see:
 * [Bitsavers Univac 1100 document archive](https://bitsavers.org/pdf/univac/1100)
 * [Fourmilab Univac Memories document archive](https://www.fourmilab.ch/documents/univac/manuals/)
 * [Datapro: UNIVAC 1100 Series](https://bitsavers.org/pdf/univac/1100/datapro/70C-877-11_7812_UNIVAC_1100.pdf)
+* [Datapro: Unisys 1100/60](https://bitsavers.org/pdf/univac/1100/datapro/70C-944YT-60_8702_Unisys_1100_60.pdf)
