@@ -57,6 +57,13 @@ implements some basic functionality of EXEC-8 that I'm not sure I want
 to try to do at this point.  But even just getting an executable
 loaded and doing *something* is better than not having anything at all...
 
+According to [an old Usenet post I found online](https://comp.sys.unisys.narkive.com/FRxtnnIP/univac-1108-software),
+"The last freely available, i.e. non-copyrighted version was IIRV
+level 33. Good luck finding that. :-( The current versions don't support
+the 1108 anymore, and haven't since IIRC level 36 or so."  (So, if I can
+find an OS boot tape image somewhere, this kind of limits the versions
+that can be used for an 1100/20 (a/k/a 1108).
+
 I am also planning to put together some tools to maniplulate
 disk pack images, so that the emulator will at least have some
 way to do disk I/O (assuming it ever gets that far along), as
